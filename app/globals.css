@@ -1,6 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-dark: #8B6914;
+  --crimson: #8B1A1A;
+  --dark: #0A0806;
+  --dark-mid: #12100C;
+  --dark-surface: #1C1810;
+  --dark-border: #2A2318;
+  --text-primary: #E8DFC8;
+  --text-secondary: #A89878;
+  --text-muted: #6B5C42;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
-  background: #0A0806;
-  color: #E8DFC8;
-  font-family: Georgia, serif;
+  background-color: var(--dark);
+  color: var(--text-primary);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover { color: var(--gold-light); }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, rgba(10,8,6,0.98) 0%, rgba(10,8,6,0) 100%);
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+
+nav .logo {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  list-style: none;
+}
+
+nav .nav-links a {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover { color: var(--gold); }
+
+nav .nav-cta {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dark) !important;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  padding: 0.55rem 1.4rem;
+  text-decoration: none;
+  transition: all 0.3s ease !important;
+}
+
+nav .nav-cta:hover {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  transform: translateY(-1px);
+}
+
+footer {
+  border-top: 1px solid var(--dark-border);
+  padding: 3rem 2rem;
+  textAlign: center;
+  background: var(--dark-mid);
+  text-align: center;
+}
+
+footer p {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+footer .footer-sub {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-style: italic;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  nav .nav-links { gap: 1.5rem; }
 }
