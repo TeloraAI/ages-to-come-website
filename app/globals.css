@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 
 :root {
-  --gold: #C9A84C;
-  --gold-light: #E8C97A;
-  --gold-dark: #8B6914;
+  --gold: #E2B96F;
+  --gold-light: #F0D090;
+  --gold-dark: #C9A84C;
   --crimson: #8B1A1A;
   --dark: #0A0806;
   --dark-mid: #12100C;
   --dark-surface: #1C1810;
   --dark-border: #2A2318;
   --text-primary: #E8DFC8;
-  --text-secondary: #A89878;
+  --text-secondary: #C4AA88;
   --text-muted: #6B5C42;
 }
 
