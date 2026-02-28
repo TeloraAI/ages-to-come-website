@@ -211,4 +211,25 @@ export default function Lore() {
                   }} />
 
                   {/* Right column — summary */}
-                  <div style={{ flex: 1, minWidth: '
+                  <div style={{ flex: 1, minWidth: '280px' }}>
+                    <p style={{
+                      fontFamily: "'Crimson Pro', serif",
+                      fontSize: '1.05rem',
+                      color: '#C4AA88',
+                      lineHeight: 1.85,
+                    }}>{entry.summary}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>The Ages to Come © 2026 Brian Westad — The Shadow History Cycle</p>
+        <p className="footer-sub">Empires rise and fall in history — but behind them, unseen powers have been waging a far older war.</p>
+      </footer>
+    </>
+  )
+}
