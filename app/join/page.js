@@ -15,13 +15,15 @@ export default function Join() {
 
   return (
     <>
-      <nav>
+        <nav>
         <a href="/" className="logo">THE AGES TO COME</a>
         <ul className="nav-links">
+          <li><a href="/">Home</a></li>
           <li><a href="/series">The Series</a></li>
           <li><a href="/world">The World</a></li>
           <li><a href="/characters">Characters</a></li>
           <li><a href="/lore">Lore</a></li>
+          <li><a href="/about">About</a></li>
           <li><a href="/join" className="nav-cta">Join</a></li>
         </ul>
       </nav>
