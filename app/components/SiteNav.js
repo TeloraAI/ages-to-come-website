@@ -1,38 +1,59 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+const LINKS = [
+  { href: '/series', label: 'The Series' },
+  { href: '/world', label: 'The World' },
+  { href: '/characters', label: 'Characters' },
+  { href: '/lore', label: 'Lore' },
+  { href: '/about', label: 'About' },
+]
 
 export default function SiteNav() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [open, setOpen] = useState(false)
+  const pathname = usePathname()
 
-  const closeMenu = () => setMenuOpen(false)
+  // Close the mobile menu after navigating.
+  useEffect(() => setOpen(false), [pathname])
 
   return (
-    <nav className={menuOpen ? 'nav-open' : ''}>
-      <a href="/" className="logo" onClick={closeMenu}>
-        THE AGES TO COME
-      </a>
-      <button
-        type="button"
-        className="nav-toggle"
-        aria-expanded={menuOpen}
-        aria-controls="site-nav-menu"
-        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-        onClick={() => setMenuOpen((open) => !open)}
-      >
-        <span className="nav-toggle-bar" />
-        <span className="nav-toggle-bar" />
-        <span className="nav-toggle-bar" />
-      </button>
-      <ul id="site-nav-menu" className="nav-links">
-        <li><a href="/" onClick={closeMenu}>Home</a></li>
-        <li><a href="/series" onClick={closeMenu}>The Series</a></li>
-        <li><a href="/world" onClick={closeMenu}>The World</a></li>
-        <li><a href="/characters" onClick={closeMenu}>Characters</a></li>
-        <li><a href="/lore" onClick={closeMenu}>Lore</a></li>
-        <li><a href="/about" onClick={closeMenu}>About</a></li>
-        <li><a href="/join" className="nav-cta" onClick={closeMenu}>Join</a></li>
-      </ul>
-    </nav>
+    <header className={`site-nav${open ? ' open' : ''}`}>
+      <div className="site-nav-inner">
+        <Link href="/" className="logo">
+          THE AGES TO COME
+        </Link>
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-expanded={open}
+          aria-controls="site-menu"
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span className="sr-only">{open ? 'Close menu' : 'Open menu'}</span>
+          <span className="nav-toggle-bar" aria-hidden="true" />
+          <span className="nav-toggle-bar" aria-hidden="true" />
+          <span className="nav-toggle-bar" aria-hidden="true" />
+        </button>
+        <nav aria-label="Main" style={{ display: 'contents' }}>
+          <ul id="site-menu" className="nav-links">
+            {LINKS.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} aria-current={pathname === l.href ? 'page' : undefined}>
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/join" className="nav-cta" aria-current={pathname === '/join' ? 'page' : undefined}>
+                Join
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   )
 }
