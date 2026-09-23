@@ -26,6 +26,7 @@ Vault (read-only source): `C:\Users\salmo\OneDrive\Documents\BUSINESS\Black Diam
 
 ## Project-specific rules
 - The vault is read-only. Never publish raw vault text: it holds spoilers, the Book 3 manuscript, and editor notes.
+- The GitHub repo is public. `content/vault/` holds only fields the site renders, for published characters; run `python scripts/vault_sync.py` to regenerate it, never hand-copy vault text into the repo. Published books are listed in `content/site.json`.
 - Public copy is spoiler-free: who a character is when readers first meet them in Book 1, with no events or fates.
 - Where the art sheets and the vault disagree, the vault wins; flag the mismatch to Brian.
 - Daylight palette: the series, mortals, places, the author. Night palette: celestials and cosmology. Gold marks the Throne and the faithful only.
