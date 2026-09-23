@@ -1,0 +1,132 @@
+[
+  {
+    "slug": "amata",
+    "name": "Amata",
+    "realm": "mortal",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/amata.jpg",
+    "sourceHash": "9af5f8f188ff"
+  },
+  {
+    "slug": "brennus-curtius",
+    "name": "Brennus Curtius",
+    "realm": "mortal",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/brennus-curtius.jpg",
+    "sourceHash": "88c0aa2ddaad"
+  },
+  {
+    "slug": "carolus",
+    "name": "Carolus",
+    "realm": "mortal",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/carolus.jpg",
+    "sourceHash": "d7227decbea1"
+  },
+  {
+    "slug": "kynops",
+    "name": "Kynops",
+    "realm": "mortal",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/kynops.jpg",
+    "sourceHash": "23eae6107572"
+  },
+  {
+    "slug": "marcus",
+    "name": "Marcus",
+    "realm": "mortal",
+    "books": [
+      1
+    ],
+    "portrait": null,
+    "sourceHash": "e1423f56c585"
+  },
+  {
+    "slug": "octavius",
+    "name": "Octavius",
+    "realm": "mortal",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/octavius.jpg",
+    "sourceHash": "a2080cee1e02"
+  },
+  {
+    "slug": "philip",
+    "name": "Philip",
+    "realm": "mortal",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/philip.jpg",
+    "sourceHash": "5d689be9cbc7"
+  },
+  {
+    "slug": "yohanan",
+    "name": "Yohanan",
+    "realm": "mortal",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/yohanan.jpg",
+    "sourceHash": "9093144bdc17"
+  },
+  {
+    "slug": "zetes",
+    "name": "Zetes",
+    "realm": "mortal",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/zetes.jpg",
+    "sourceHash": "def730604dbc"
+  },
+  {
+    "slug": "egeria",
+    "name": "Egeria",
+    "realm": "celestial",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/egeria.jpg",
+    "sourceHash": "63e8963ccca2"
+  },
+  {
+    "slug": "elihu",
+    "name": "Elihu",
+    "realm": "celestial",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/elihu.jpg",
+    "sourceHash": "8983f525df81"
+  },
+  {
+    "slug": "niru-basamu",
+    "name": "Niru Basamu",
+    "realm": "celestial",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/niru-basamu.jpg",
+    "sourceHash": "5ad6593abe82"
+  },
+  {
+    "slug": "telora",
+    "name": "Telora",
+    "realm": "celestial",
+    "books": [
+      1
+    ],
+    "portrait": "/characters/telora.jpg",
+    "sourceHash": "1e59ea2631aa"
+  }
+]
