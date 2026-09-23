@@ -1,4 +1,6 @@
 import './globals.css'
+import SiteNav from './components/SiteNav'
+import SiteFooter from './components/SiteFooter'
 
 export const metadata = {
   title: 'The Ages to Come — The Shadow History Cycle',
@@ -14,7 +16,9 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <SiteNav />
         {children}
+        <SiteFooter />
       </body>
     </html>
   )

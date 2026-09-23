@@ -15,18 +15,7 @@ export default function Join() {
 
   return (
     <>
-        <nav>
-        <a href="/" className="logo">THE AGES TO COME</a>
-        <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/series">The Series</a></li>
-          <li><a href="/world">The World</a></li>
-          <li><a href="/characters">Characters</a></li>
-          <li><a href="/lore">Lore</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/join" className="nav-cta">Join</a></li>
-        </ul>
-      </nav>
+
 
       <main style={{
         minHeight: '100vh',
@@ -189,11 +178,7 @@ export default function Join() {
 
               {/* Form */}
               <form onSubmit={handleSubmit}>
-                <div style={{
-                  display: 'flex',
-                  gap: '0',
-                  marginBottom: '1rem',
-                }}>
+                <div className="email-signup-row" style={{ marginBottom: '1rem' }}>
                   <input
                     type="email"
                     value={email}
@@ -201,11 +186,9 @@ export default function Join() {
                     placeholder="Your email address"
                     required
                     style={{
-                      flex: 1,
                       padding: '1.1rem 1.5rem',
                       background: '#1C1810',
                       border: '1px solid #2A2318',
-                      borderRight: 'none',
                       color: '#E8DFC8',
                       fontFamily: "'Crimson Pro', serif",
                       fontSize: '1rem',
@@ -295,10 +278,6 @@ export default function Join() {
         </div>
       </main>
 
-      <footer>
-        <p>The Ages to Come © 2026 Brian Westad — The Shadow History Cycle</p>
-        <p className="footer-sub">Empires rise and fall in history — but behind them, unseen powers have been waging a far older war.</p>
-      </footer>
     </>
   )
 }

@@ -1,4 +1,5 @@
 'use client'
+
 export default function Series() {
   const books = [
     {
@@ -58,189 +59,191 @@ export default function Series() {
   ]
 
   return (
-    <main style={{ paddingTop: '80px' }}>
-      {/* Header */}
-      <section style={{
-        padding: '5rem 2rem 3rem',
-        textAlign: 'center',
-        background: 'linear-gradient(180deg, #12100C 0%, #0A0806 100%)',
-        borderBottom: '1px solid #2A2318',
-      }}>
-        <p style={{
-          fontFamily: "'Cinzel', serif",
-          fontSize: '0.65rem',
-          letterSpacing: '0.3em',
-          textTransform: 'uppercase',
-          color: '#C9A84C',
-          marginBottom: '1.5rem',
-          opacity: 0.7,
-        }}>
-          The Shadow History Cycle
-        </p>
-        <h1 style={{
-          fontFamily: "'Cinzel', serif",
-          fontSize: 'clamp(2rem, 5vw, 4rem)',
-          color: '#C9A84C',
-          marginBottom: '1.5rem',
-        }}>
-          The Series
-        </h1>
-        <div style={{
-          width: '80px',
-          height: '1px',
-          background: 'linear-gradient(90deg, transparent, #C9A84C, transparent)',
-          margin: '0 auto 2rem',
-        }} />
-        <p style={{
-          fontFamily: "'Crimson Pro', serif",
-          fontSize: '1.15rem',
-          color: '#A89878',
-          maxWidth: '600px',
-          margin: '0 auto',
-          fontStyle: 'italic',
-        }}>
-          Six books. Two interwoven trilogies. One Shadow History spanning from the Tower of Babel to the exile of the last Apostle.
-        </p>
-      </section>
+    <>
 
-      {/* Trilogy labels */}
-      <section style={{ padding: '4rem 2rem', maxWidth: '1000px', margin: '0 auto' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '2rem',
-          marginBottom: '3rem',
-          padding: '2rem',
-          background: '#12100C',
-          border: '1px solid #2A2318',
+
+      <main style={{ paddingTop: '80px' }}>
+        {/* Header */}
+        <section style={{
+          padding: '5rem 2rem 3rem',
+          textAlign: 'center',
+          background: 'linear-gradient(180deg, #12100C 0%, #0A0806 100%)',
+          borderBottom: '1px solid #2A2318',
         }}>
-          {[
-            { name: 'Classical Trilogy', books: 'Books 1, 3 & 5', desc: '1st–2nd Century AD — The early Church navigates the Roman-Parthian conflict as the shadow empire rises.' },
-            { name: 'Past Trilogy', books: 'Books 2, 4 & 6', desc: 'Prehistoric to 1st Century — The ancient roots of the celestial rebellion, from Babel to the Messiah.' },
-          ].map((t, i) => (
-            <div key={i}>
-              <h3 style={{
-                fontFamily: "'Cinzel', serif",
-                fontSize: '1rem',
-                color: '#C9A84C',
-                marginBottom: '0.3rem',
-              }}>{t.name}</h3>
-              <p style={{
-                fontFamily: "'Cinzel', serif",
-                fontSize: '0.65rem',
-                letterSpacing: '0.15em',
-                color: '#6B5C42',
-                textTransform: 'uppercase',
-                marginBottom: '0.8rem',
-              }}>{t.books}</p>
-              <p style={{
-                fontFamily: "'Crimson Pro', serif",
-                fontSize: '0.95rem',
-                color: '#A89878',
-              }}>{t.desc}</p>
-            </div>
-          ))}
-        </div>
+          <p style={{
+            fontFamily: "'Cinzel', serif",
+            fontSize: '0.65rem',
+            letterSpacing: '0.3em',
+            textTransform: 'uppercase',
+            color: '#C9A84C',
+            marginBottom: '1.5rem',
+            opacity: 0.7,
+          }}>
+            The Shadow History Cycle
+          </p>
+          <h1 style={{
+            fontFamily: "'Cinzel', serif",
+            fontSize: 'clamp(2rem, 5vw, 4rem)',
+            color: '#C9A84C',
+            marginBottom: '1.5rem',
+          }}>
+            The Series
+          </h1>
+          <div style={{
+            width: '80px',
+            height: '1px',
+            background: 'linear-gradient(90deg, transparent, #C9A84C, transparent)',
+            margin: '0 auto 2rem',
+          }} />
+          <p style={{
+            fontFamily: "'Crimson Pro', serif",
+            fontSize: '1.15rem',
+            color: '#A89878',
+            maxWidth: '600px',
+            margin: '0 auto',
+            fontStyle: 'italic',
+          }}>
+            Six books. Two interwoven trilogies. One Shadow History spanning from the Tower of Babel to the exile of the last Apostle.
+          </p>
+        </section>
 
-        {/* Books list */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-          {books.map((book) => (
-            <div key={book.number} style={{
-              display: 'grid',
-              gridTemplateColumns: '80px 1fr',
-              gap: '0',
-              background: '#12100C',
-              border: '1px solid #2A2318',
-              transition: 'border-color 0.3s ease',
-            }}
-            onMouseEnter={e => e.currentTarget.style.borderColor = '#8B6914'}
-            onMouseLeave={e => e.currentTarget.style.borderColor = '#2A2318'}
-            >
-              {/* Number column */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRight: '1px solid #2A2318',
-                padding: '2rem',
-                background: book.status === 'Completed' ? 'rgba(201,168,76,0.05)' : 'transparent',
-              }}>
-                <span style={{
-                  fontFamily: "'Cinzel', serif",
-                  fontSize: '2rem',
-                  fontWeight: 900,
-                  color: book.status === 'Completed' ? '#C9A84C' : '#2A2318',
-                }}>
-                  {book.number}
-                </span>
-              </div>
-
-              {/* Content column */}
-              <div style={{ padding: '2rem' }}>
-                <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.8rem', flexWrap: 'wrap' }}>
-                  <span style={{
-                    fontFamily: "'Cinzel', serif",
-                    fontSize: '0.6rem',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    color: book.trilogy === 'Classical Trilogy' ? '#8B6914' : '#6B5C42',
-                    border: `1px solid ${book.trilogy === 'Classical Trilogy' ? '#8B6914' : '#2A2318'}`,
-                    padding: '0.2rem 0.6rem',
-                  }}>
-                    {book.trilogy}
-                  </span>
-                  <span style={{
-                    fontFamily: "'Cinzel', serif",
-                    fontSize: '0.6rem',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    color: book.status === 'Completed' ? '#C9A84C' : book.status === 'In Progress' ? '#A89878' : '#6B5C42',
-                    border: `1px solid ${book.status === 'Completed' ? '#8B6914' : '#2A2318'}`,
-                    padding: '0.2rem 0.6rem',
-                  }}>
-                    {book.status}
-                  </span>
-                </div>
+        {/* Trilogy labels */}
+        <section style={{ padding: '4rem 2rem 6rem', maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '2rem',
+            marginBottom: '3rem',
+            padding: '2rem',
+            background: '#12100C',
+            border: '1px solid #2A2318',
+          }}>
+            {[
+              { name: 'Classical Trilogy', books: 'Books 1, 3 & 5', desc: '1st–2nd Century AD — The early Church navigates the Roman-Parthian conflict as the shadow empire rises.' },
+              { name: 'Past Trilogy', books: 'Books 2, 4 & 6', desc: 'Prehistoric to 1st Century — The ancient roots of the celestial rebellion, from Babel to the Messiah.' },
+            ].map((t, i) => (
+              <div key={i}>
                 <h3 style={{
                   fontFamily: "'Cinzel', serif",
-                  fontSize: 'clamp(1rem, 2vw, 1.4rem)',
+                  fontSize: '1rem',
                   color: '#C9A84C',
                   marginBottom: '0.3rem',
-                }}>
-                  {book.title}
-                </h3>
+                }}>{t.name}</h3>
                 <p style={{
                   fontFamily: "'Cinzel', serif",
                   fontSize: '0.65rem',
-                  letterSpacing: '0.1em',
+                  letterSpacing: '0.15em',
                   color: '#6B5C42',
                   textTransform: 'uppercase',
-                  marginBottom: '1rem',
-                }}>
-                  {book.era}
-                </p>
-                <p style={{
-                  fontFamily: "'Crimson Pro', serif",
-                  fontSize: '1rem',
-                  color: '#A89878',
-                  fontStyle: 'italic',
                   marginBottom: '0.8rem',
-                }}>
-                  "{book.tagline}"
-                </p>
+                }}>{t.books}</p>
                 <p style={{
                   fontFamily: "'Crimson Pro', serif",
                   fontSize: '0.95rem',
-                  color: '#6B5C42',
-                  lineHeight: 1.7,
-                }}>
-                  {book.synopsis}
-                </p>
+                  color: '#A89878',
+                }}>{t.desc}</p>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    </main>
+            ))}
+          </div>
+
+          {/* Books list */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+            {books.map((book) => (
+              <div key={book.number} style={{
+                display: 'grid',
+                gridTemplateColumns: '80px 1fr',
+                gap: '0',
+                background: '#12100C',
+                border: '1px solid #2A2318',
+                transition: 'border-color 0.3s ease',
+              }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = '#8B6914'}
+              onMouseLeave={e => e.currentTarget.style.borderColor = '#2A2318'}
+              >
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRight: '1px solid #2A2318',
+                  padding: '2rem',
+                  background: book.status === 'Completed' ? 'rgba(201,168,76,0.05)' : 'transparent',
+                }}>
+                  <span style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: '2rem',
+                    fontWeight: 900,
+                    color: book.status === 'Completed' ? '#C9A84C' : '#2A2318',
+                  }}>
+                    {book.number}
+                  </span>
+                </div>
+                <div style={{ padding: '2rem' }}>
+                  <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.8rem', flexWrap: 'wrap' }}>
+                    <span style={{
+                      fontFamily: "'Cinzel', serif",
+                      fontSize: '0.6rem',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: book.trilogy === 'Classical Trilogy' ? '#8B6914' : '#6B5C42',
+                      border: `1px solid ${book.trilogy === 'Classical Trilogy' ? '#8B6914' : '#2A2318'}`,
+                      padding: '0.2rem 0.6rem',
+                    }}>
+                      {book.trilogy}
+                    </span>
+                    <span style={{
+                      fontFamily: "'Cinzel', serif",
+                      fontSize: '0.6rem',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: book.status === 'Completed' ? '#C9A84C' : book.status === 'In Progress' ? '#A89878' : '#6B5C42',
+                      border: `1px solid ${book.status === 'Completed' ? '#8B6914' : '#2A2318'}`,
+                      padding: '0.2rem 0.6rem',
+                    }}>
+                      {book.status}
+                    </span>
+                  </div>
+                  <h3 style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: 'clamp(1rem, 2vw, 1.4rem)',
+                    color: '#C9A84C',
+                    marginBottom: '0.3rem',
+                  }}>
+                    {book.title}
+                  </h3>
+                  <p style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: '0.65rem',
+                    letterSpacing: '0.1em',
+                    color: '#6B5C42',
+                    textTransform: 'uppercase',
+                    marginBottom: '1rem',
+                  }}>
+                    {book.era}
+                  </p>
+                  <p style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    fontSize: '1rem',
+                    color: '#A89878',
+                    fontStyle: 'italic',
+                    marginBottom: '0.8rem',
+                  }}>
+                    "{book.tagline}"
+                  </p>
+                  <p style={{
+                    fontFamily: "'Crimson Pro', serif",
+                    fontSize: '0.95rem',
+                    color: '#6B5C42',
+                    lineHeight: 1.7,
+                  }}>
+                    {book.synopsis}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+
+    </>
   )
 }

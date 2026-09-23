@@ -48,18 +48,7 @@ export default function World() {
 
   return (
     <>
-        <nav>
-        <a href="/" className="logo">THE AGES TO COME</a>
-        <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/series">The Series</a></li>
-          <li><a href="/world">The World</a></li>
-          <li><a href="/characters">Characters</a></li>
-          <li><a href="/lore">Lore</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/join" className="nav-cta">Join</a></li>
-        </ul>
-      </nav>
+
 
       <main style={{ paddingTop: '80px' }}>
         {/* Header */}
@@ -111,7 +100,7 @@ export default function World() {
         }}>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
             gap: '1px',
             background: '#2A2318',
           }}>
@@ -228,10 +217,6 @@ export default function World() {
         </section>
       </main>
 
-      <footer>
-        <p>The Ages to Come © 2026 Brian Westad — The Shadow History Cycle</p>
-        <p className="footer-sub">Empires rise and fall in history — but behind them, unseen powers have been waging a far older war.</p>
-      </footer>
     </>
   )
 }

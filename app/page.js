@@ -1,21 +1,20 @@
 'use client'
 
+import { useState } from 'react'
+
 export default function Home() {
+  const [email, setEmail] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (email) {
+      setSubmitted(true)
+    }
+  }
+
   return (
     <>
-           <nav>
-        <a href="/" className="logo">THE AGES TO COME</a>
-        <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/series">The Series</a></li>
-          <li><a href="/world">The World</a></li>
-          <li><a href="/characters">Characters</a></li>
-          <li><a href="/lore">Lore</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/join" className="nav-cta">Join</a></li>
-        </ul>
-      </nav>
-
       <main>
         {/* HERO */}
         <section style={{
@@ -61,6 +60,7 @@ export default function Home() {
             zIndex: 2,
             textAlign: 'center',
             padding: '2rem',
+            paddingTop: 'calc(4.5rem + env(safe-area-inset-top))',
             maxWidth: '900px',
             animation: 'fadeInUp 1s ease forwards',
           }}>
@@ -359,53 +359,80 @@ export default function Home() {
             color: '#C9A84C',
             marginBottom: '1rem',
           }}>Join the Inner Circle</h2>
-          <p style={{
-            fontFamily: "'Crimson Pro', serif",
-            fontSize: '1.1rem',
-            color: '#A89878',
-            marginBottom: '2.5rem',
-            fontStyle: 'italic',
-          }}>
-            Receive the first three chapters, exclusive lore entries, 
-            and Shadow History research — before anyone else sees them.
-          </p>
-          <div style={{ display: 'flex', maxWidth: '460px', margin: '0 auto' }}>
-            <input
-              type="email"
-              placeholder="Your email address"
-              style={{
-                flex: 1,
-                padding: '1rem 1.5rem',
-                background: '#1C1810',
-                border: '1px solid #2A2318',
-                borderRight: 'none',
-                color: '#E8DFC8',
+          {!submitted ? (
+            <>
+              <p style={{
                 fontFamily: "'Crimson Pro', serif",
-                fontSize: '1rem',
-                outline: 'none',
-              }}
-            />
-            <button style={{
-              padding: '1rem 1.8rem',
-              fontFamily: "'Cinzel', serif",
-              fontSize: '0.68rem',
-              fontWeight: 600,
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: '#0A0806',
-              background: 'linear-gradient(135deg, #8B6914, #C9A84C)',
-              border: 'none',
-              cursor: 'pointer',
-              whiteSpace: 'nowrap',
-            }}>Enter</button>
-          </div>
+                fontSize: '1.1rem',
+                color: '#A89878',
+                marginBottom: '2.5rem',
+                fontStyle: 'italic',
+              }}>
+                Receive the first three chapters, exclusive lore entries, 
+                and Shadow History research — before anyone else sees them.
+              </p>
+              <form onSubmit={handleSubmit} style={{ maxWidth: '460px', margin: '0 auto' }}>
+                <div className="email-signup-row">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    placeholder="Your email address"
+                    required
+                    style={{
+                      padding: '1rem 1.5rem',
+                      background: '#1C1810',
+                      border: '1px solid #2A2318',
+                      color: '#E8DFC8',
+                      fontFamily: "'Crimson Pro', serif",
+                      fontSize: '1rem',
+                      outline: 'none',
+                    }}
+                  />
+                  <button type="submit" style={{
+                    padding: '1rem 1.8rem',
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: '0.68rem',
+                    fontWeight: 600,
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: '#0A0806',
+                    background: 'linear-gradient(135deg, #8B6914, #C9A84C)',
+                    border: 'none',
+                    cursor: 'pointer',
+                    whiteSpace: 'nowrap',
+                  }}>Enter</button>
+                </div>
+              </form>
+            </>
+          ) : (
+            <div style={{ animation: 'fadeInUp 0.8s ease forwards' }}>
+              <div style={{
+                fontSize: '1.5rem',
+                color: '#E2B96F',
+                opacity: 0.4,
+                marginBottom: '1.5rem',
+              }}>✦</div>
+              <h3 style={{
+                fontFamily: "'Cinzel', serif",
+                fontSize: 'clamp(1.4rem, 3vw, 2rem)',
+                color: '#E2B96F',
+                marginBottom: '1rem',
+              }}>You're In.</h3>
+              <p style={{
+                fontFamily: "'Crimson Pro', serif",
+                fontSize: '1.1rem',
+                color: '#C4AA88',
+                fontStyle: 'italic',
+                lineHeight: 1.85,
+              }}>
+                Welcome to the Inner Circle. Check your inbox — the first dispatch is on its way.
+              </p>
+            </div>
+          )}
         </section>
       </main>
 
-      <footer>
-        <p>The Ages to Come © 2026 Brian Westad — The Shadow History Cycle</p>
-        <p className="footer-sub">Empires rise and fall in history — but behind them, unseen powers have been waging a far older war.</p>
-      </footer>
     </>
   )
 }

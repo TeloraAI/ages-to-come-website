@@ -3,18 +3,7 @@
 export default function About() {
   return (
     <>
-          <nav>
-        <a href="/" className="logo">THE AGES TO COME</a>
-        <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/series">The Series</a></li>
-          <li><a href="/world">The World</a></li>
-          <li><a href="/characters">Characters</a></li>
-          <li><a href="/lore">Lore</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/join" className="nav-cta">Join</a></li>
-        </ul>
-      </nav>
+
 
       <main style={{ paddingTop: '80px' }}>
 
@@ -329,10 +318,6 @@ export default function About() {
 
       </main>
 
-      <footer>
-        <p>The Ages to Come © 2026 Brian Westad — The Shadow History Cycle</p>
-        <p className="footer-sub">Empires rise and fall in history — but behind them, unseen powers have been waging a far older war.</p>
-      </footer>
     </>
   )
 }
