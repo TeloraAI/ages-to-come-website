@@ -1,0 +1,293 @@
+[
+  {
+    "slug": "yohanan",
+    "status": "published",
+    "reviewedHash": "9093144bdc17",
+    "epithet": "The last apostle",
+    "facts": [
+      {
+        "label": "Of",
+        "value": "Galilee, exiled to Patmos"
+      },
+      {
+        "label": "Follows",
+        "value": "The Messiah, as the last of the Twelve"
+      }
+    ],
+    "blurb": "The last living eyewitness of the Messiah, exiled to a small volcanic island by an empire that finds him too dangerous to execute and too stubborn to silence. He is old beyond what age should allow, and he is still writing.",
+    "connections": [
+      "zetes",
+      "amata",
+      "elihu"
+    ],
+    "portraitAlt": "Yohanan, a very old man with a long white beard, looking upward"
+  },
+  {
+    "slug": "carolus",
+    "status": "published",
+    "reviewedHash": "d7227decbea1",
+    "epithet": "Carolus Rufus Latina",
+    "facts": [
+      {
+        "label": "Family",
+        "value": "Nephew of the garrison commander"
+      },
+      {
+        "label": "Rank",
+        "value": "Roman noble"
+      }
+    ],
+    "blurb": "Young, restless, and full of everything Rome promises its best sons, yet carrying a longing he cannot name. Against every expectation of his upbringing, he finds himself drawn to an exiled old man on a forgotten island.",
+    "connections": [
+      "philip",
+      "yohanan",
+      "amata",
+      "brennus-curtius"
+    ],
+    "portraitAlt": "Carolus, a young Roman with short brown hair and a red cloak pinned at the shoulder"
+  },
+  {
+    "slug": "amata",
+    "status": "published",
+    "reviewedHash": "9af5f8f188ff",
+    "epithet": "The harbormaster’s daughter",
+    "facts": [
+      {
+        "label": "Of",
+        "value": "Patmos"
+      },
+      {
+        "label": "Follows",
+        "value": "The Way"
+      }
+    ],
+    "blurb": "She knew every ship that entered Patmos harbor before she knew any theology. One of Yohanan’s first disciples, her faith is not learned doctrine but lived practice, and she holds her ground when grown men lose theirs.",
+    "connections": [
+      "zetes",
+      "yohanan",
+      "carolus",
+      "telora"
+    ],
+    "portraitAlt": "Amata, a young woman with a long dark braid, lit by lamplight"
+  },
+  {
+    "slug": "zetes",
+    "status": "published",
+    "reviewedHash": "def730604dbc",
+    "epithet": "Harbormaster of Patmos",
+    "facts": [
+      {
+        "label": "Of",
+        "value": "Patmos"
+      },
+      {
+        "label": "Follows",
+        "value": "The Way"
+      }
+    ],
+    "blurb": "Loud, warm, and honest to a fault: the pilot who lends the old exile coins when his allowance runs late and argues openly with the hard teachings. Amata’s father and Yohanan’s closest friend on the island.",
+    "connections": [
+      "amata",
+      "yohanan"
+    ],
+    "portraitAlt": "Zetes, a broad-shouldered harbormaster"
+  },
+  {
+    "slug": "philip",
+    "status": "published",
+    "reviewedHash": "5d689be9cbc7",
+    "epithet": "Prefect Philip Sentius Latina",
+    "facts": [
+      {
+        "label": "Post",
+        "value": "Prefect of the Patmos garrison"
+      },
+      {
+        "label": "Family",
+        "value": "Uncle and guardian of Carolus"
+      }
+    ],
+    "blurb": "Stern, respected, and principled within his own framework. He does not drink, does not indulge, and plans his nephew’s future with a campaign officer’s precision, without ever quite managing to know him.",
+    "connections": [
+      "carolus",
+      "octavius"
+    ],
+    "portraitAlt": "Philip, a stern Roman prefect"
+  },
+  {
+    "slug": "octavius",
+    "status": "published",
+    "reviewedHash": "a2080cee1e02",
+    "epithet": "Centurion of the garrison",
+    "facts": [
+      {
+        "label": "Post",
+        "value": "Patmos garrison"
+      },
+      {
+        "label": "Rank",
+        "value": "Centurion"
+      }
+    ],
+    "blurb": "A Roman officer of real ability posted to the wrong island, and burned by the gap between his name and his station. Tall enough to fill a doorway, with eyes that miss nothing.",
+    "connections": [
+      "philip"
+    ],
+    "portraitAlt": "Octavius, a tall, broad Roman centurion"
+  },
+  {
+    "slug": "kynops",
+    "status": "published",
+    "reviewedHash": "23eae6107572",
+    "epithet": "High Priest of Artemis",
+    "facts": [
+      {
+        "label": "Of",
+        "value": "Patmos"
+      },
+      {
+        "label": "Serves",
+        "value": "Artemis and the order of Rome"
+      }
+    ],
+    "blurb": "The man who runs the island’s temple, and very nearly the island. No hypocrite: he truly believes in Rome’s gods and the order they give. His creed is that all things are permissible for the greatest good.",
+    "connections": [
+      "brennus-curtius",
+      "yohanan"
+    ],
+    "portraitAlt": "Kynops, a portly priest in white robes"
+  },
+  {
+    "slug": "brennus-curtius",
+    "status": "published",
+    "reviewedHash": "88c0aa2ddaad",
+    "epithet": "The priest’s apprentice",
+    "facts": [
+      {
+        "label": "Of",
+        "value": "Patmos"
+      },
+      {
+        "label": "Serves",
+        "value": "Kynops, as apprentice"
+      }
+    ],
+    "blurb": "Tall, lean, and copper-haired, he folds himself into his master’s shadow. Loyal to Kynops, and fiercely protective of the only two friends he has had since he lost everything as a boy.",
+    "connections": [
+      "kynops",
+      "carolus",
+      "amata"
+    ],
+    "portraitAlt": "Brennus, a tall young man with copper-touched fair hair"
+  },
+  {
+    "slug": "marcus",
+    "status": "published",
+    "reviewedHash": "e1423f56c585",
+    "epithet": "Sell-sword",
+    "facts": [
+      {
+        "label": "Trade",
+        "value": "Sell-sword of the legions"
+      },
+      {
+        "label": "Serves",
+        "value": "Brennus Curtius, for pay"
+      }
+    ],
+    "blurb": "Competent, stone-faced, and loyal to coin and nothing else. He learned long ago that hope has to be kept small and quiet, or it will be found and used against you.",
+    "connections": [
+      "brennus-curtius"
+    ]
+  },
+  {
+    "slug": "elihu",
+    "status": "published",
+    "reviewedHash": "8983f525df81",
+    "epithet": "Sentinel of the Eastern Watch",
+    "allegiance": "faithful",
+    "facts": [
+      {
+        "label": "Order",
+        "value": "Mal’ach, sentinel class"
+      },
+      {
+        "label": "Serves",
+        "value": "The Throne"
+      }
+    ],
+    "blurb": "An ancient sentinel set to watch, protect, and bear witness across the whole span of human history, and a companion to Yohanan. Patient where others are quick, steady where others fracture.",
+    "connections": [
+      "yohanan",
+      "telora"
+    ],
+    "portraitAlt": "Elihu, a bald celestial with golden eyes, in gold armor before white wings"
+  },
+  {
+    "slug": "telora",
+    "status": "published",
+    "reviewedHash": "1e59ea2631aa",
+    "epithet": "Herald of the Throne",
+    "allegiance": "faithful",
+    "facts": [
+      {
+        "label": "Order",
+        "value": "Mal’ach, herald class"
+      },
+      {
+        "label": "Serves",
+        "value": "The Throne"
+      }
+    ],
+    "blurb": "Quiet, precise, unhurried. She does not speak until the command has been weighed and sealed. She shows up when called, and she carries the messages.",
+    "connections": [
+      "elihu",
+      "amata"
+    ],
+    "portraitAlt": "Telora, a celestial with long black hair and golden eyes, in white and gold"
+  },
+  {
+    "slug": "egeria",
+    "status": "published",
+    "reviewedHash": "63e8963ccca2",
+    "epithet": "Herald who left her post",
+    "allegiance": "fallen",
+    "facts": [
+      {
+        "label": "Order",
+        "value": "Fallen herald"
+      },
+      {
+        "label": "Serves",
+        "value": "Niru Basamu’s rebellion"
+      }
+    ],
+    "blurb": "Once among the most gifted and perceptive of the heralds, now an agent of the rebellion, working through the priests and powers of the human world and carrying pride and grief in equal measure.",
+    "connections": [
+      "niru-basamu"
+    ],
+    "portraitAlt": "Egeria, a celestial with long red hair and blue eyes, in a dark red cloak"
+  },
+  {
+    "slug": "niru-basamu",
+    "status": "published",
+    "reviewedHash": "5ad6593abe82",
+    "epithet": "Firstborn of the Fallen",
+    "allegiance": "fallen",
+    "facts": [
+      {
+        "label": "Order",
+        "value": "High Elohim"
+      },
+      {
+        "label": "Leads",
+        "value": "The rebellion against the Throne"
+      }
+    ],
+    "blurb": "The oldest and most dangerous of the fallen, and the first to call for insurrection. He trades empires the way mortals trade coins, and he never forces a choice when he can arrange for it to feel inevitable.",
+    "connections": [
+      "egeria"
+    ],
+    "portraitAlt": "Niru Basamu, a towering celestial with golden hair and glowing yellow eyes"
+  }
+]
