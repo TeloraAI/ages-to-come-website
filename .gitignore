@@ -1,0 +1,8 @@
+node_modules/
+.next/
+.telora/
+.env*
+!.env.example
+.vercel
+*.log
+__pycache__/
